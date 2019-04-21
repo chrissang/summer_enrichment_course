@@ -1,0 +1,66 @@
+{
+	"title": "Prime Mathematics Education Summer Enrichment Courses",
+	"phoneNumber": "516-457-8016",
+	"location": {
+		"copy": "Courses will be held in Scarsdale at the",
+		"facility": "Greenville Community Church",
+		"link": "https://www.google.com/maps/place/270+Ardsley+Rd,+Scarsdale,+NY+10583/@40.9929897,-73.8207124,17z/data=!3m1!4b1!4m5!3m4!1s0x89c29369e2c527a3:0xfe56567b27cd5660!8m2!3d40.9929857!4d-73.8185184",
+		"address": "270 Ardsley Rd, Scarsdale, NY 10583"
+	},
+	"about": {
+		"title": "About Prime Mathematics Education",
+		"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
+	},
+	"sections": [
+		{
+			"title": "Section/Paragraph 1",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
+		},
+		{
+			"title": "Section/Paragraph 2",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
+		},
+		{
+			"title": "Section/Paragraph 3",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
+		}
+	],
+	"courses": [
+		{
+			"image": "images/sat.png",
+			"title": "Intensive SAT Math Course (Session 1)",
+			"date": "August 4th - August 30th",
+			"time": "9 AM - 11:30 AM (M-F)",
+			"price": "Price: $1,400",
+			"link": "/course/sat-math",
+			"bulletPoints": [
+				"Complete review of underlying math concepts",
+				"Time management and test-taking strategies"
+			]
+		},
+		{
+			"image": "images/sat.png",
+			"title": "Intensive SAT Math Course (Session 1)",
+			"date": "August 4th - August 30th",
+			"time": "9 AM - 11:30 AM (M-F)",
+			"price": "Price: $1,400",
+			"link": "/course/sat-math",
+			"bulletPoints": [
+				"Complete review of underlying math concepts",
+				"Time management and test-taking strategies"
+			]
+		},
+		{
+			"image": "images/algebra.jpg",
+			"title": "Algebra and Foundations for 6th Graders",
+			"date": "July 7th - August 2nd",
+			"time": "9 AM - 11:30 AM (M-F)",
+			"price": "Price: $700",
+			"link": "/course/algebra",
+			"bulletPoints": [
+				"Complete review of underlying math concepts",
+				"Time management and test-taking strategies"
+			]
+		}
+	]
+}
