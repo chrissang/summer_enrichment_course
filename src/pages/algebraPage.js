@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class SatMathPage extends Component {
+class AlgebraPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {  }
@@ -24,4 +24,4 @@ const mapStateToProps = state => {
   };
 };
  
-export default connect(mapStateToProps)(SatMathPage);
+export default connect(mapStateToProps)(AlgebraPage);

@@ -11,20 +11,6 @@
 		"title": "About Prime Mathematics Education",
 		"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
 	},
-	"sections": [
-		{
-			"title": "Section/Paragraph 1",
-			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
-		},
-		{
-			"title": "Section/Paragraph 2",
-			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
-		},
-		{
-			"title": "Section/Paragraph 3",
-			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
-		}
-	],
 	"courses": [
 		{
 			"image": "images/sat.png",
@@ -61,6 +47,20 @@
 				"Complete review of underlying math concepts",
 				"Time management and test-taking strategies"
 			]
+		}
+	],
+	"sections": [
+		{
+			"title": "Section/Paragraph 1",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
+		},
+		{
+			"title": "Section/Paragraph 2",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
+		},
+		{
+			"title": "Section/Paragraph 3",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
 		}
 	]
 }

@@ -4,9 +4,9 @@ import { Route } from 'react-router-dom';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import NavBar from './components/nav-bar';
-import Card from './components/card';
 import HomePage from './pages/home';
 import SatMathPage from './pages/satMathPage';
+import AlgebraPage from './pages/algebraPage';
 
 class App extends Component {
   state = {}
@@ -16,6 +16,7 @@ class App extends Component {
         <NavBar/>
         <Route path="/" exact component={HomePage}/>
         <Route path="/course/sat-math" exact component={SatMathPage}/>
+        <Route path="/course/algebra" exact component={AlgebraPage}/>
       </div>
     );
   }
