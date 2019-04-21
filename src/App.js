@@ -5,8 +5,6 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import NavBar from './components/nav-bar';
 import HomePage from './pages/home';
-import SatMathPage from './pages/satMathPage';
-import AlgebraPage from './pages/algebraPage';
 
 class App extends Component {
   state = {}
@@ -15,13 +13,11 @@ class App extends Component {
       <div>
         <NavBar/>
         <Route path="/" exact component={HomePage}/>
-        <Route path="/course/sat-math" exact component={SatMathPage}/>
-        <Route path="/course/algebra" exact component={AlgebraPage}/>
       </div>
     );
   }
   componentDidMount() {
-    axios.get(`./summer_enrichment_courses.json`)
+    axios.get(`http://localhost:3000/summer_enrichment_courses.json`)
       .then(res => {
         const courseData = res.data;
         this.props.getDataCourseData(courseData);

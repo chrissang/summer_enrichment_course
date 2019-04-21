@@ -8,14 +8,13 @@ class Card extends Component {
 		this.state = {  }
 	}
 	render() {
-		var cardStyle = {
+		const cardStyle = {
 			'width': '100%',
 			'margin': '1.5rem 0'
 		};
-		var imageWidth = {
-			'maxWidth': '200px',
-			'marginLeft': 'auto',
-    	'marginRight': 'auto'
+		const cardBody = {
+			'background-color': '#EB4A53',
+			'color': '#fff'
 		};
 		let bulletList = null;
     if (this.props.cardData.bulletPoints.length > 0) {
@@ -30,20 +29,15 @@ class Card extends Component {
       );
     }
 		return (
-			<div className="container">
-				<div className="card" style={cardStyle}>
-					<img
-						className="card-img-top"
-						src={this.props.cardData.image}
-						alt={this.props.cardData.image}
-						style={imageWidth}/>
-					<div className="card-body">
+			<div className="container mt-3">
+				<div className="card">
+					<div className="card-body d-flex align-content-stretch flex-wrap flex-column" style={cardBody}>
 						<h5 className="card-title">{this.props.cardData.title}</h5>
 						<span>{this.props.cardData.date} </span>
 						<span>{this.props.cardData.time}</span>
 						{bulletList}
 						<p><b>{this.props.cardData.price}</b></p>
-						<Link to={this.props.cardData.link} className="btn btn-primary">Learn More</Link>
+						<Link to={this.props.cardData.link} className="btn btn-secondary">Contact to register </Link>
 					</div>
 				</div>
 			</div>

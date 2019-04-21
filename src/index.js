@@ -7,7 +7,6 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import reducer from './store/reducer';
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 const store = createStore(reducer);
@@ -17,11 +16,11 @@ store.subscribe(() => {
 })
 
 const app = (
-	<BrowserRouter>
-    <Provider store={store}>
+	<Provider store={store}>
+		<BrowserRouter>
 			<App />
-		</Provider>
-	</BrowserRouter>
+		</BrowserRouter>
+	</Provider>
 )
 
 ReactDOM.render(app, document.getElementById('root'));

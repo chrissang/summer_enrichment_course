@@ -9,11 +9,15 @@
 	},
 	"about": {
 		"title": "About Prime Mathematics Education",
-		"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
+		"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis",
+		"sections": [
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
+		]
 	},
 	"courses": [
 		{
-			"image": "images/sat.png",
 			"title": "Intensive SAT Math Course (Session 1)",
 			"date": "August 4th - August 30th",
 			"time": "9 AM - 11:30 AM (M-F)",
@@ -25,7 +29,6 @@
 			]
 		},
 		{
-			"image": "images/sat.png",
 			"title": "Intensive SAT Math Course (Session 1)",
 			"date": "August 4th - August 30th",
 			"time": "9 AM - 11:30 AM (M-F)",
@@ -37,7 +40,6 @@
 			]
 		},
 		{
-			"image": "images/algebra.jpg",
 			"title": "Algebra and Foundations for 6th Graders",
 			"date": "July 7th - August 2nd",
 			"time": "9 AM - 11:30 AM (M-F)",
@@ -47,20 +49,6 @@
 				"Complete review of underlying math concepts",
 				"Time management and test-taking strategies"
 			]
-		}
-	],
-	"sections": [
-		{
-			"title": "Section/Paragraph 1",
-			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
-		},
-		{
-			"title": "Section/Paragraph 2",
-			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
-		},
-		{
-			"title": "Section/Paragraph 3",
-			"copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis"
 		}
 	]
 }
