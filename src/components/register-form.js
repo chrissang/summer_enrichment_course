@@ -3,7 +3,13 @@ import React, { Component } from 'react';
 class RegisterForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = {
+			name: '',
+			phoneNumber: '',
+			phoneNumber: '',
+			email: '',
+			timeToReachYou: ''
+		};
   }
   render() { 
     return (

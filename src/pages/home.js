@@ -10,7 +10,10 @@ class HomePage extends Component {
 	}
 	render() {
 		let cardList = null;
-    if (Object.keys(this.props.courseData).length > 0) {
+		let phoneNumber = null;
+		let location = null;
+		
+		if (Object.keys(this.props.courseData).length > 0) {
       cardList = (
         <div className="container mb-5">
           <div class="row justify-content-md-center">
@@ -29,9 +32,27 @@ class HomePage extends Component {
         </div>
 			);
 		}
+		if (this.props.courseData) {
+			phoneNumber = (<p>Call {this.props.courseData.phoneNumber} to speak to the instructor</p>);
+		}
+		if (this.props.courseData.location) {
+			location = (
+				<p>
+					{this.props.courseData.location.copy}
+					<a href={this.props.courseData.location.link}> {this.props.courseData.location.facility} </a>
+					{this.props.courseData.location.address}
+				</p>
+			);
+		}
 		return (
 			<div>
         <About />
+				<div className="row">
+					<div className="col-sm-12 px-5 mt-3">
+						<p>{phoneNumber}</p>
+						<p>{location}</p>
+					</div>
+				</div>
 				{cardList}
 			</div>
 		);
