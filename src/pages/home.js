@@ -15,18 +15,16 @@ class HomePage extends Component {
 		
 		if (Object.keys(this.props.courseData).length > 0) {
       cardList = (
-        <div className="container mb-5">
-          <div class="row justify-content-md-center">
-            <div className="col-sm-12">
-              <div className="card-group">
-                {
-                  this.props.courseData.courses.map((course, index) => {
-                    return <div key={index}>
-                        <Card cardData={course}></Card>
-                      </div>
-                  })
-                }
-              </div>
+        <div className="row mb-5">
+          <div className="col-sm-12">
+            <div className="row card-group justify-content-sm-center justify-content-lg-start">
+              {
+                this.props.courseData.courses.map((course, index) => {
+                  return <div className="col-sm-12 col-md-6 col-lg-4" key={index}>
+                      <Card cardData={course}></Card>
+                    </div>
+                })
+              }
             </div>
           </div>
         </div>
@@ -48,9 +46,9 @@ class HomePage extends Component {
 			<div>
         <About />
 				<div className="row">
-					<div className="col-sm-12 px-5 mt-3">
-						<p>{phoneNumber}</p>
-						<p>{location}</p>
+					<div className="col-sm-12 mt-3">
+						{phoneNumber}
+						{location}
 					</div>
 				</div>
 				{cardList}

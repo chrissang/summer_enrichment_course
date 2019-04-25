@@ -24,7 +24,7 @@ class About extends Component {
     }
     return (
       <div className="row">
-        <div className="col-sm-12 px-5 mt-3">
+        <div className="col-sm-12 mt-3">
           <h3>{title}</h3>
           {sections}
         </div>

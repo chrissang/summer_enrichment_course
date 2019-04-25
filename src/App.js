@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-// import './App.css';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import NavBar from './components/nav-bar';
 import HomePage from './pages/home';
+import RegisterPage from './pages/register';
 
 class App extends Component {
   state = {}
@@ -12,12 +12,15 @@ class App extends Component {
     return (
       <div>
         <NavBar/>
-        <Route path="/" exact component={HomePage}/>
+        <div className="container">
+          <Route path="/" exact component={HomePage}/>
+          <Route path="/register" exact component={RegisterPage}/>
+        </div>
       </div>
     );
   }
   componentDidMount() {
-    axios.get(`http://localhost:3000/summer_enrichment_courses.json`)
+    axios.get(`/json/summer_enrichment_courses.json`)
       .then(res => {
         const courseData = res.data;
         this.props.getDataCourseData(courseData);

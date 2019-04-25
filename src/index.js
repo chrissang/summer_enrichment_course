@@ -11,10 +11,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 const store = createStore(reducer);
 
-store.subscribe(() => {
-    console.warn('store ', store.getState());
-})
-
 const app = (
 	<Provider store={store}>
 		<BrowserRouter>
