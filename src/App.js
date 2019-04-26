@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import NavBar from './components/nav-bar';
 import HomePage from './pages/home';
 import RegisterPage from './pages/register';
+import RegisterSuccessPage from './pages/registerSuccess';
 
 class App extends Component {
   state = {}
@@ -15,6 +16,7 @@ class App extends Component {
         <div className="container">
           <Route path="/" exact component={HomePage}/>
           <Route path="/register" exact component={RegisterPage}/>
+					<Route path="/register/success" exact component={RegisterSuccessPage}/>
         </div>
       </div>
     );

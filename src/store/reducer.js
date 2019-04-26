@@ -1,5 +1,5 @@
 const initialState = {
-  summerCourseData: {}
+	summerCourseData: {}
 }
 
 const reducer = (state = initialState, action) => {

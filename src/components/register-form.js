@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import * as emailjs from 'emailjs-com';
+// import { Link, Route } from 'react-router-dom';
+// import { push } from 'connected-react-router';
+import { connect } from 'react-redux';
 
 class RegisterForm extends Component {
   constructor(props) {
@@ -8,27 +10,46 @@ class RegisterForm extends Component {
     this.state = {
 			name: '',
 			phoneNumber: '',
-			email: '',
-			timeToReachYou: ''
+			timeToReachYou: '',
+			isPhoneNumber: true
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  handleInputChange(event) {
+	}
+	validatePhoneNumber = () => {
+		const number = this.state.phoneNumber;
+		const phoneNumberRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+		if (number.match(phoneNumberRegex))
+			this.setState({isPhoneNumber: true});
+		else
+			this.setState({isPhoneNumber: false});
+	}
+  handleInputChange = (event) => {
     const target = event.target;
     const value = target.value;
-    const id = target.id;
-    this.setState({
-      [id]: value
-    });
+		const id = target.id;
+		
+		this.setState({
+			[id]: value
+		});
   }
-  handleSubmit(event) {
-    event.preventDefault();
-    emailjs.send('gmail', 'template_4sBnZzEY', this.state, 'user_8c1R8Hn7KJ93CT6jDBzZq')
-      .then(function(response) {
-      }, function(err) {
-        console.warn('FAILED...', err);
-      });
+  handleSubmit = (event) => {
+		event.preventDefault();
+		this.validatePhoneNumber();
+		if (this.state.phoneNumber.length > 0 && this.state.isPhoneNumber) {
+			console.warn('valid form ', this.state);
+			// this.props.dispatch(push('/'));
+			// this.props.history.push('/register/success');
+			// this.context.router.transitionTo('/register/success')
+			// this.props.history.push(`/register/success`);
+			// emailjs.send('gmail', 'template_WmoIYDOI', this.state, 'user_SSWSq9pKwAek0JQY2t7ka')
+			// 	.then(function(response) {
+			// 	}, function(err) {
+			// 		console.warn('FAILED...', err);
+			// 	});
+		} else {
+			this.setState({isPhoneNumber: false});
+		}
   }
   render() { 
     return (
@@ -46,23 +67,16 @@ class RegisterForm extends Component {
         <div className="form-group">
           <label>Phone Number</label>
           <input
-            type="tel"
-            className="form-control"
+						type="text"
+						required
+						className={"form-control " + (this.state.isPhoneNumber ? '' : 'is-invalid')}
+						onBlur={this.validatePhoneNumber}
             id="phoneNumber"
             name="phoneNumber"
-            placeholder="111-111-1111"
+						placeholder="111-111-1111"
             value={this.state.phoneNumber}
             onChange={this.handleInputChange}/>
-        </div>
-        <div className="form-group">
-          <label>E-mail</label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            placeholder="email@gmail.com"
-            value={this.state.email}
-            onChange={this.handleInputChange}/>
+					<div className="invalid-feedback">Please provide a valid phone number</div>
         </div>
         <div className="form-group">
           <label>Best time to reach you</label>
@@ -83,7 +97,7 @@ class RegisterForm extends Component {
 
 const mapStateToProps = state => {
   return {
-    courseData: state.summerCourseData
+		courseData: state.summerCourseData
   };
 };
  

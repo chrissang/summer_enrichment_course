@@ -50,7 +50,39 @@ module.exports = {
                          }
                       }
                 ]
-            },
+						},
+						{
+							test: /\.(scss)$/,
+							use: [
+								{
+									// Adds CSS to the DOM by injecting a `<style>` tag
+									loader: 'style-loader'
+								},
+								{
+									// Interprets `@import` and `url()` like `import/require()` and will resolve them
+									loader: 'css-loader'
+								},
+								{
+									// Loader for webpack to process CSS with PostCSS
+									loader: 'postcss-loader',
+									options: {
+										ident: 'postcss',
+										plugins: () => [
+											autoprefixer({
+												browsers: [
+													"> 1%",
+													"last 2 versions"
+												]
+											})
+										]
+									}
+								},
+								{
+									// Loads a SASS/SCSS file and compiles it to CSS
+									loader: 'sass-loader'
+								}
+							]
+						},
             {
                 test: /\.(png|jpe?g|gif)$/,
                 loader: 'url-loader?limit=8000&name=images/[name].[ext]'
@@ -59,7 +91,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: __dirname + '/src/index.html',
+            template: __dirname + '/public/index.html',
             filename: 'index.html',
             inject: 'body'
         }),

@@ -5,8 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: './src/index.js',
-  devServer: { 
-    contentBase: './public'
+  devServer: {
+		historyApiFallback: true,
+		contentBase: './public'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -27,7 +28,7 @@ module.exports = {
       {
         test: /\.json$/,
         loader: 'json-loader'
-      },
+			},
       {
         test: /\.css$/,
         exclude: /node_modules/,
@@ -57,6 +58,38 @@ module.exports = {
           },
           { loader: 'sass-loader' }
         ]
+			},
+			{
+				test: /\.(scss)$/,
+        use: [
+          {
+            // Adds CSS to the DOM by injecting a `<style>` tag
+            loader: 'style-loader'
+          },
+          {
+            // Interprets `@import` and `url()` like `import/require()` and will resolve them
+            loader: 'css-loader'
+          },
+          {
+            // Loader for webpack to process CSS with PostCSS
+            loader: 'postcss-loader',
+            options: {
+							ident: 'postcss',
+              plugins: () => [
+                autoprefixer({
+                  browsers: [
+                    "> 1%",
+                    "last 2 versions"
+                  ]
+                })
+              ]
+            }
+          },
+          {
+            // Loads a SASS/SCSS file and compiles it to CSS
+            loader: 'sass-loader'
+          }
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
@@ -68,7 +101,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: __dirname + '/public/index.html',
       filename: 'index.html',
-      inject: 'body'
+			inject: 'body'
     })
   ]
 }
