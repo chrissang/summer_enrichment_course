@@ -24,7 +24,7 @@ class RegisterForm extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    emailjs.send('gmail', 'template_WmoIYDOI', this.state, 'user_SSWSq9pKwAek0JQY2t7ka')
+    emailjs.send('gmail', 'template_4sBnZzEY', this.state, 'user_8c1R8Hn7KJ93CT6jDBzZq')
       .then(function(response) {
       }, function(err) {
         console.warn('FAILED...', err);
