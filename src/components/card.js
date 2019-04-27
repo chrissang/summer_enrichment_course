@@ -9,7 +9,7 @@ class Card extends Component {
 	}
 	render() {
 		const cardBody = {
-			'backgroundColor': '#EB4A53',
+			'backgroundColor': '#f05454',
 			'color': '#fff'
 		};
 		let bulletList = null;
@@ -25,8 +25,8 @@ class Card extends Component {
       );
     }
 		return (
-			<div className="card mt-3">
-				<div className="card-body d-flex flex-column" style={cardBody}>
+			<div className="card mt-3 ml-2 mr-2 d-flex overrideFlex">
+				<div className="card-body cardBgColor d-flex flex-column justify-content-between">
 					<h5 className="card-title">{this.props.cardData.title}</h5>
 					<span>{this.props.cardData.date} </span>
 					<span>{this.props.cardData.time}</span>

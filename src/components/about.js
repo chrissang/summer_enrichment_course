@@ -16,7 +16,7 @@ class About extends Component {
         <div>
           {
             this.props.courseData.about.sections.map((section, index) => {
-              return <p className="mb-0" key={index}><small>{section}</small></p>
+              return <p className="mb-0" key={index}>{section}</p>
             })
           }
         </div>
@@ -25,7 +25,7 @@ class About extends Component {
     return (
       <div className="row">
         <div className="col-sm-12 mt-3">
-          <h3>{title}</h3>
+          <h1>{title}</h1>
           {sections}
         </div>
       </div>

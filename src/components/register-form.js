@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import * as emailjs from 'emailjs-com';
-// import { Link, Route } from 'react-router-dom';
-// import { push } from 'connected-react-router';
+import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
 
 class RegisterForm extends Component {
@@ -11,7 +10,8 @@ class RegisterForm extends Component {
 			name: '',
 			phoneNumber: '',
 			timeToReachYou: '',
-			isPhoneNumber: true
+      isPhoneNumber: true,
+      routeToSuccess: false
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,21 +37,23 @@ class RegisterForm extends Component {
 		event.preventDefault();
 		this.validatePhoneNumber();
 		if (this.state.phoneNumber.length > 0 && this.state.isPhoneNumber) {
-			console.warn('valid form ', this.state);
-			// this.props.dispatch(push('/'));
-			// this.props.history.push('/register/success');
-			// this.context.router.transitionTo('/register/success')
-			// this.props.history.push(`/register/success`);
-			// emailjs.send('gmail', 'template_WmoIYDOI', this.state, 'user_SSWSq9pKwAek0JQY2t7ka')
-			// 	.then(function(response) {
-			// 	}, function(err) {
-			// 		console.warn('FAILED...', err);
-			// 	});
+      const emailParams = {
+        name: this.state.name,
+        phoneNumber: this.state.phoneNumber,
+        timeToReachYou: this.state.timeToReachYou
+      }
+			emailjs.send('kunalnshah15', 'template_4sBnZzEY', emailParams, 'user_8c1R8Hn7KJ93CT6jDBzZq')
+				.then((response) => {
+          this.setState({routeToSuccess: true});
+				}, (err) => {
+					console.warn('FAILED...', err);
+      	});
 		} else {
 			this.setState({isPhoneNumber: false});
 		}
   }
-  render() { 
+  render() {
+    if (this.state.routeToSuccess) return <Redirect to='/register/success' />
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
@@ -88,8 +90,13 @@ class RegisterForm extends Component {
             value={this.state.timeToReachYou}
             onChange={this.handleInputChange}/>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-        <p className="mt-3">You may also call or text the instructor at {this.props.courseData.phoneNumber}</p>
+        <button type="submit" className="btn btn-secondary">Submit</button>
+        <p className="mt-3">You may also call or text the instructor at
+          {' '}
+          <a className="link" href={"tel:" + this.props.courseData.phoneNumberLink}>
+            <u>{this.props.courseData.phoneNumber}</u>
+          </a>
+        </p>
       </form>
     );
   }

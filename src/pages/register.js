@@ -10,10 +10,12 @@ class RegisterPage extends Component {
 	render() {
 		return (
 			<div className="row">
-				<div className="col-sm-12">
-					<div className="jumbotron">
-						<h1>Register</h1>
-            <RegisterForm />
+				<div className="col-sm-12 mt-4 mb-4">
+					<div className="card">
+  					<h5 className="card-header">Register</h5>
+  					<div className="card-body">
+							<RegisterForm />
+  					</div>
 					</div>
 				</div>
 			</div>

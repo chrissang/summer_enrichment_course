@@ -17,12 +17,10 @@ class HomePage extends Component {
       cardList = (
         <div className="row mb-5">
           <div className="col-sm-12">
-            <div className="row card-group justify-content-sm-center justify-content-lg-start">
+            <div className="flex-d card-group flex-sm-column flex-md-row">
               {
                 this.props.courseData.courses.map((course, index) => {
-                  return <div className="col-sm-12 col-md-6 col-lg-4" key={index}>
-                      <Card cardData={course}></Card>
-                    </div>
+                  return <Card key={index} cardData={course}></Card>
                 })
               }
             </div>
@@ -31,13 +29,26 @@ class HomePage extends Component {
 			);
 		}
 		if (this.props.courseData) {
-			phoneNumber = (<p>Call {this.props.courseData.phoneNumber} to speak to the instructor</p>);
+			phoneNumber = (
+				<p>Call
+					{' '}
+					<a className="link" href={"tel:" + this.props.courseData.phoneNumberLink}>
+						<u>{this.props.courseData.phoneNumber}</u>
+					</a>
+					{' '}
+					to speak to the instructor
+				</p>
+			);
 		}
 		if (this.props.courseData.location) {
 			location = (
 				<p>
 					{this.props.courseData.location.copy}
-					<a href={this.props.courseData.location.link}> {this.props.courseData.location.facility} </a>
+					{' '}
+					<a className="link" href={this.props.courseData.location.link} target="_blank">
+						<u>{this.props.courseData.location.facility}</u>
+					</a>
+					{' '}
 					{this.props.courseData.location.address}
 				</p>
 			);

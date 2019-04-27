@@ -1,0 +1,20 @@
+#root {
+  font-family: adobe-caslon-pro;
+  .cardBgColor {
+    background-color: #f05454;
+    color: #fff;
+  }
+  a.link {
+    color: #f05454;
+  }
+  @include media-breakpoint-down(md) {
+    .overrideFlex {
+      flex: 1 0 40%;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    .overrideFlex {
+      flex: 1 0 25%;
+    }
+  }
+}
