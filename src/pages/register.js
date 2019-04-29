@@ -12,7 +12,7 @@ class RegisterPage extends Component {
 			<div className="row">
 				<div className="col-sm-12 mt-4 mb-4">
 					<div className="card">
-  					<h5 className="card-header">Register</h5>
+  					<h5 className="card-header">Contact to Register</h5>
   					<div className="card-body">
 							<RegisterForm />
   					</div>

@@ -1,7 +1,7 @@
 {
 	"title": "Prime Mathematics Education",
-	"phoneNumber": "516-457-8016",
-	"phoneNumberLink": "5164578016",
+	"phoneNumber": "914-727-2419",
+	"phoneNumberLink": "9147272419",
 	"location": {
 		"copy": "Courses will be held in Scarsdale at the",
 		"facility": "Greenville Community Church, ",
@@ -12,10 +12,10 @@
 		"title": "Summer Math Enrichment Series",
 		"copy": "",
 		"sections": [
-			"Prime Mathematics Education is offering summer math classes to enrich and prepare students for the coming school year.",
-			"Head-Start classes (two weeks) are available for students entering Geometry, Algebra I, or Algebra II. Students will learn concepts and problem-solving skills that will help them excel in the subject.",
-			"Intensive SAT Math preparation (four weeks) is available. SAT classes focus on mastering the foundations. Emphasis is placed on understanding the concepts, not on test-taking tricks.",
-			"Algebra classes are available for motivated students entering 6th grade. These classes will challenge students and build a strong foundation."
+			"Prime Mathematics Education is offering these summer classes to enrich and prepare students for the coming school year:",
+			"1. Head-Start classes (two weeks) for students entering Geometry, Algebra I, or Algebra II. Students will learn concepts and problem-solving skills that will help them excel in the subject.",
+			"2. Intensive SAT Math preparation (four weeks) focuses on mastering the foundations. Emphasis is placed on understanding the underlying concepts.",
+			"3. Algebra classes for motivated students entering 6th grade. These classes will challenge students and build a strong foundation."
 		]
 	},
 	"courses": [
@@ -71,5 +71,5 @@
 			]
 		}
 	],
-	"registerSuccessCopy": "Thank you for your inquery an email has been sent to the instructor. You will recieve a phone call ASAP"
+	"registerSuccessCopy": "Thank you! I will call you as soon as possible"
 }
